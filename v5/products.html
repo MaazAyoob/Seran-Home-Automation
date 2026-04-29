@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products — Seran Home Automation | Bengaluru</title>
+  <meta name="description" content="Explore Seran's range of smart home products — intelligent lighting, climate control, security systems, AV integration, and energy management in Bengaluru." />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- STICKY CTA BAR -->
+<div id="sticky-cta" role="banner" aria-label="Special offer">
+  <div class="container">
+    <div class="sticky-cta-inner">
+      <p>🏠 Free Smart Home Consultation — Limited slots available this month!</p>
+      <a href="contact.html#lead-form" class="sticky-cta-btn">Book Free Demo</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+   <a href="index.html" class="nav-logo" aria-label="Seran Home Automation — Home">
+        <img src="assets/images/logo.png" alt="Seran Home Automation" height="44" width="auto" />
+      </a>
+      <ul class="nav-links" role="list">
+        <li class="nav-item">
+          <button class="nav-link" aria-haspopup="true" aria-expanded="false" aria-controls="mega-menu-solutions">
+            Solutions <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="mega-menu glass" id="mega-menu-solutions" role="region" aria-label="Solutions menu">
+            <div class="mega-menu-grid">
+              <a href="solutions.html#residential" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-house-signal" aria-hidden="true"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Residential Homes</h3><p>Smart lighting, climate, and security for premium homes and villas.</p></div>
+              </a>
+              <a href="solutions.html#offices" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-building" aria-hidden="true"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Corporate Offices</h3><p>Intelligent building control to boost productivity and efficiency.</p></div>
+              </a>
+              <a href="solutions.html#hotels" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-hotel" aria-hidden="true"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Hotels &amp; Hospitality</h3><p>Elevate guest experience with seamless room automation.</p></div>
+              </a>
+              <a href="solutions.html#healthcare" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-hospital" aria-hidden="true"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Healthcare Facilities</h3><p>Safe, efficient automation for hospitals and clinics.</p></div>
+              </a>
+            </div>
+            <div class="mega-menu-footer">
+              <span>Explore all solutions →</span>
+              <a href="contact.html#lead-form" class="btn-primary btn-sm-nav">Get Consultation</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" aria-haspopup="true" aria-expanded="false" aria-controls="mega-menu-products">
+            Products <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="mega-menu glass" id="mega-menu-products" role="region" aria-label="Products menu">
+            <div class="mega-menu-grid">
+              <a href="products.html#lighting" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Smart Lighting</h3><p>DALI, DMX, and KNX-compatible intelligent lighting systems.</p></div>
+              </a>
+              <a href="products.html#climate" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-temperature-half" aria-hidden="true"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Climate Control</h3><p>Precision HVAC and smart thermostat integration.</p></div>
+              </a>
+              <a href="products.html#security" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Security Systems</h3><p>AI-powered surveillance, access control, and intrusion detection.</p></div>
+              </a>
+              <a href="products.html#av" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-tv" aria-hidden="true"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">AV &amp; Entertainment</h3><p>Home theatre, multi-room audio, and 4K distribution systems.</p></div>
+              </a>
+            </div>
+            <div class="mega-menu-footer">
+              <span>View full product catalog →</span>
+              <a href="products.html" class="btn-outline btn-sm-nav">Browse All</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="insights.html" class="nav-link">Insights</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" data-action="toggle-theme" aria-label="Toggle light/dark mode" title="Toggle theme">
+          <i class="fa-solid fa-sun" data-theme-icon aria-hidden="true"></i>
+        </button>
+        <a href="contact.html#lead-form" class="btn-primary nav-cta">
+          Free Demo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav glass" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+  </button>
+  <button class="mobile-nav-link" data-submenu="mobile-solutions" aria-expanded="false" aria-controls="mobile-solutions">
+    Solutions <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+  </button>
+  <div class="mobile-submenu" id="mobile-solutions" aria-hidden="true">
+    <a href="solutions.html#residential">Residential Homes</a>
+    <a href="solutions.html#offices">Corporate Offices</a>
+    <a href="solutions.html#hotels">Hotels &amp; Hospitality</a>
+    <a href="solutions.html#healthcare">Healthcare</a>
+  </div>
+  <button class="mobile-nav-link" data-submenu="mobile-products" aria-expanded="false" aria-controls="mobile-products">
+    Products <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+  </button>
+  <div class="mobile-submenu" id="mobile-products" aria-hidden="true">
+    <a href="products.html#lighting">Smart Lighting</a>
+    <a href="products.html#climate">Climate Control</a>
+    <a href="products.html#security">Security Systems</a>
+    <a href="products.html#av">AV &amp; Entertainment</a>
+  </div>
+  <a href="about.html" class="mobile-nav-link">About</a>
+  <a href="insights.html" class="mobile-nav-link">Insights</a>
+  <a href="contact.html" class="mobile-nav-link">Contact</a>
+  <div class="mobile-nav-footer">
+    <a href="contact.html#lead-form" class="btn-primary btn-block">Book Free Demo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    <button class="btn-outline btn-block btn-theme-toggle" data-action="toggle-theme">
+      <i class="fa-solid fa-sun" data-theme-icon aria-hidden="true"></i> Toggle Theme
+    </button>
+    <div class="mobile-nav-contact">
+      <a href="tel:+917411182846"><i class="fa-solid fa-phone"></i> +91 74111 82846</a>
+      <a href="https://wa.me/917411182846" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+    </div>
+    <div class="mobile-nav-social">
+      <a href="https://www.instagram.com/seran_home/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/company/seran-homeautomation/about/" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://wa.me/917411182846" class="social-btn social-btn--whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════
+  PAGE HERO
+═══════════════════════════════════════ -->
+<section id="page-hero" style="padding:10rem 0 5rem; background:linear-gradient(135deg,rgba(10,8,20,0.55) 0%,rgba(20,18,35,0.45) 100%), url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1600&auto=format&fit=crop&q=80') center/cover no-repeat;" aria-label="Products page hero">
+  <div class="container">
+    <div style="max-width:700px;">
+      <div class="hero-badge" style="display:inline-flex;"><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> Product Catalog</div>
+      <h1 class="hero-title" style="margin-top:1.2rem;">
+        The Technology Behind<br><strong>Every Smart Space</strong>
+      </h1>
+      <p class="hero-subtitle">Precision-engineered products that integrate seamlessly — from intelligent lighting controllers to AI-powered security systems.</p>
+      <div class="hero-actions" style="margin-top:2rem;">
+        <a href="contact.html#lead-form" class="btn-primary">Enquire Now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a href="solutions.html" class="btn-outline"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> View Solutions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+  PRODUCT CATEGORY ANCHORS
+═══════════════════════════════════════ -->
+
+<!-- SMART LIGHTING -->
+<section id="lighting" class="section-pad" aria-labelledby="lighting-heading">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Category 01</div>
+      <h2 class="section-title section-title--center" id="lighting-heading">Smart <span>Lighting</span></h2>
+      <p class="section-sub section-sub--center">DALI, DMX, and KNX-compatible intelligent lighting systems that transform any space — from warm residential glows to precise commercial illumination.</p>
+    </div>
+    <div class="solutions-grid">
+      <div class="solution-card reveal delay-1">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&auto=format&fit=crop&q=80');background-size:cover;background-position:center;"></div>
+        <div class="solution-card-overlay"></div>
+        <span class="solution-card-tag">Bestseller</span>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Seran Lumina Pro</h3>
+          <p class="solution-card-desc">Human-centric DALI lighting controller with circadian rhythm support and 16 million colour scenes. From ₹42,000 onwards.</p>
+          <a href="contact.html#lead-form" class="solution-card-link">Enquire <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="solution-card reveal delay-2">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=800&auto=format&fit=crop&q=80');background-size:cover;background-position:center;"></div>
+        <div class="solution-card-overlay"></div>
+        <span class="solution-card-tag">Commercial</span>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-building" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Seran Lumina Office</h3>
+          <p class="solution-card-desc">Occupancy-sensing, daylight-harvesting office lighting with centralized control and LEED certification support. From ₹55,000 per zone.</p>
+          <a href="contact.html#lead-form" class="solution-card-link">Enquire <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="solution-card reveal delay-3">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=800&auto=format&fit=crop&q=80');background-size:cover;background-position:center;"></div>
+        <div class="solution-card-overlay"></div>
+        <span class="solution-card-tag">Outdoor</span>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-sun" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Seran Lumina Landscape</h3>
+          <p class="solution-card-desc">IP67-rated outdoor lighting controller for gardens, driveways, and façades with programmable sunrise/sunset scenes. From ₹28,000.</p>
+          <a href="contact.html#lead-form" class="solution-card-link">Enquire <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CLIMATE CONTROL -->
+<section id="climate" class="section-pad" style="background:var(--surface-alt,#0f0e18);" aria-labelledby="climate-heading">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Category 02</div>
+      <h2 class="section-title section-title--center" id="climate-heading">Climate <span>Control</span></h2>
+      <p class="section-sub section-sub--center">Precision HVAC and smart thermostat integration that learns your schedule and keeps every zone at perfect comfort — automatically.</p>
+    </div>
+    <div class="solutions-grid">
+      <div class="solution-card reveal delay-1">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&auto=format&fit=crop&q=80');background-size:cover;background-position:center;"></div>
+        <div class="solution-card-overlay"></div>
+        <span class="solution-card-tag">AI Powered</span>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-temperature-half" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Seran ClimaSense</h3>
+          <p class="solution-card-desc">AI-driven thermostat with predictive scheduling, occupancy sensing, and multi-zone management. From ₹28,500 per zone.</p>
+          <a href="contact.html#lead-form" class="solution-card-link">Enquire <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="solution-card reveal delay-2">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&auto=format&fit=crop&q=80');background-size:cover;background-position:center;"></div>
+        <div class="solution-card-overlay"></div>
+        <span class="solution-card-tag">Multi-Zone</span>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-wind" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Seran ClimaSense Pro</h3>
+          <p class="solution-card-desc">16-zone HVAC controller with air quality monitoring, VOC sensing, and integration with Daikin, Mitsubishi, and LG systems. From ₹65,000.</p>
+          <a href="contact.html#lead-form" class="solution-card-link">Enquire <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="solution-card reveal delay-3">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&auto=format&fit=crop&q=80');background-size:cover;background-position:center;"></div>
+        <div class="solution-card-overlay"></div>
+        <span class="solution-card-tag">Smart Curtains</span>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-blinds" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Seran MotorDrive</h3>
+          <p class="solution-card-desc">Motorised curtain and blind controller with sun-tracking scenes, voice control, and integration with all major climate systems. From ₹12,000 per point.</p>
+          <a href="contact.html#lead-form" class="solution-card-link">Enquire <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECURITY -->
+<section id="security" class="section-pad" aria-labelledby="security-heading">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Category 03</div>
+      <h2 class="section-title section-title--center" id="security-heading">Security <span>Systems</span></h2>
+      <p class="section-sub section-sub--center">AI-powered surveillance, smart access control, and intrusion detection — all monitored from your phone, 24/7.</p>
+    </div>
+    <div class="solutions-grid">
+      <div class="solution-card reveal delay-1">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&auto=format&fit=crop&q=80');background-size:cover;background-position:center;"></div>
+        <div class="solution-card-overlay"></div>
+        <span class="solution-card-tag">AI Vision</span>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-camera" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Seran SecureVision</h3>
+          <p class="solution-card-desc">4K IP camera system with AI facial recognition, perimeter alerts, and seamless NVR integration. From ₹65,000 for 8-cam kit.</p>
+          <a href="contact.html#lead-form" class="solution-card-link">Enquire <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="solution-card reveal delay-2">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=80');background-size:cover;background-position:center;"></div>
+        <div class="solution-card-overlay"></div>
+        <span class="solution-card-tag">Biometric</span>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-door-closed" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Seran AccessIQ</h3>
+          <p class="solution-card-desc">Biometric + NFC smart lock system with remote access, visitor logs, and full integration with home security. From ₹18,000 per door.</p>
+          <a href="contact.html#lead-form" class="solution-card-link">Enquire <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="solution-card reveal delay-3">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop&q=80');background-size:cover;background-position:center;"></div>
+        <div class="solution-card-overlay"></div>
+        <span class="solution-card-tag">Intrusion</span>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Seran GuardNet</h3>
+          <p class="solution-card-desc">Wireless perimeter alarm with PIR sensors, glass-break detectors, and instant mobile alerts. Professional grade. From ₹45,000.</p>
+          <a href="contact.html#lead-form" class="solution-card-link">Enquire <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- AV & ENTERTAINMENT -->
+<section id="av" class="section-pad" style="background:var(--surface-alt,#0f0e18);" aria-labelledby="av-heading">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Category 04</div>
+      <h2 class="section-title section-title--center" id="av-heading">AV <span>&amp; Entertainment</span></h2>
+      <p class="section-sub section-sub--center">Home theatre, multi-room audio, and 4K video distribution — cinema-grade experiences designed for the way you live.</p>
+    </div>
+    <div class="solutions-grid">
+      <div class="solution-card reveal delay-1">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1593784991095-a205069470b6?w=800&auto=format&fit=crop&q=80');background-size:cover;background-position:center;"></div>
+        <div class="solution-card-overlay"></div>
+        <span class="solution-card-tag">Home Cinema</span>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-film" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Seran CinemaCore</h3>
+          <p class="solution-card-desc">4K 120Hz home cinema processor with Dolby Atmos 7.1 support and multi-room audio distribution. From ₹1,20,000 complete system.</p>
+          <a href="contact.html#lead-form" class="solution-card-link">Enquire <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="solution-card reveal delay-2">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1545454675-3531b543be5d?w=800&auto=format&fit=crop&q=80');background-size:cover;background-position:center;"></div>
+        <div class="solution-card-overlay"></div>
+        <span class="solution-card-tag">Multi-Room</span>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-music" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Seran AudioNet</h3>
+          <p class="solution-card-desc">Whole-home audio distribution — stream different music to every room simultaneously with in-ceiling speakers and one app. From ₹75,000.</p>
+          <a href="contact.html#lead-form" class="solution-card-link">Enquire <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="solution-card reveal delay-3">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&auto=format&fit=crop&q=80');background-size:cover;background-position:center;"></div>
+        <div class="solution-card-overlay"></div>
+        <span class="solution-card-tag">4K Distribution</span>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-tv" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Seran VideoMatrix</h3>
+          <p class="solution-card-desc">8×8 HDMI 2.1 matrix for distributing 4K HDR video from any source to any screen in your home or office. From ₹90,000.</p>
+          <a href="contact.html#lead-form" class="solution-card-link">Enquire <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ENERGY MANAGEMENT -->
+<section id="energy" class="section-pad" aria-labelledby="energy-heading">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Category 05</div>
+      <h2 class="section-title section-title--center" id="energy-heading">Energy <span>Management</span></h2>
+      <p class="section-sub section-sub--center">Monitor, optimise, and reduce your energy consumption with smart meters, solar integration, and real-time analytics.</p>
+    </div>
+    <div class="solutions-grid">
+      <div class="solution-card reveal delay-1">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&auto=format&fit=crop&q=80');background-size:cover;background-position:center;"></div>
+        <div class="solution-card-overlay"></div>
+        <span class="solution-card-tag">Eco</span>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-solar-panel" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Seran EcoNode</h3>
+          <p class="solution-card-desc">Smart energy monitor with solar integration, real-time consumption analytics, and auto load-shedding. From ₹35,000 complete system.</p>
+          <a href="contact.html#lead-form" class="solution-card-link">Enquire <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="solution-card reveal delay-2">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&auto=format&fit=crop&q=80');background-size:cover;background-position:center;"></div>
+        <div class="solution-card-overlay"></div>
+        <span class="solution-card-tag">Analytics</span>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Seran EnergyIQ Dashboard</h3>
+          <p class="solution-card-desc">Cloud-based energy analytics with appliance-level monitoring, anomaly alerts, and monthly saving reports. From ₹15,000 per year.</p>
+          <a href="contact.html#lead-form" class="solution-card-link">Enquire <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="solution-card reveal delay-3">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&q=80');background-size:cover;background-position:center;"></div>
+        <div class="solution-card-overlay"></div>
+        <span class="solution-card-tag">EV Ready</span>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-car-battery" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Seran EV SmartCharge</h3>
+          <p class="solution-card-desc">Intelligent EV charger that schedules charging during off-peak hours and integrates with your solar and home energy system. From ₹22,000.</p>
+          <a href="contact.html#lead-form" class="solution-card-link">Enquire <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA BAND -->
+<section class="section-pad" style="background:linear-gradient(135deg,#1a1040 0%,#2d1b69 100%);text-align:center;" aria-label="Call to action">
+  <div class="container">
+    <div class="reveal" style="max-width:640px;margin:0 auto;">
+      <div class="section-label section-label--center">Not Sure Where to Start?</div>
+      <h2 class="section-title section-title--center">We'll Design the <span>Right Package</span></h2>
+      <p class="section-sub section-sub--center" style="margin-bottom:2.5rem;">Every project is unique. Book a free consultation and our engineers will recommend the exact products for your space and budget.</p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a href="contact.html#lead-form" class="btn-primary">Book Free Demo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a href="tel:+917411182846" class="btn-outline"><i class="fa-solid fa-phone" aria-hidden="true"></i> Call Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer id="footer" role="contentinfo" aria-label="Site footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Seran Home Automation — Home">
+        <img src="assets/images/logo.png" alt="Seran Home Automation" height="44" width="auto" />
+      </a>
+        <p>Crafting intelligent living and working environments across Bengaluru since 2013. Where technology meets luxury.</p>
+        <address class="footer-address">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>44, 6th C Main Road, 4th Block,<br>Jayanagar, Bengaluru,<br>Karnataka – 560011, India</span>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col-title">Solutions</h3>
+        <ul class="footer-links">
+          <li><a href="solutions.html#residential">Smart Homes</a></li>
+          <li><a href="solutions.html#offices">Corporate Offices</a></li>
+          <li><a href="solutions.html#hotels">Hotels &amp; Resorts</a></li>
+          <li><a href="solutions.html#healthcare">Healthcare</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col-title">Products</h3>
+        <ul class="footer-links">
+          <li><a href="products.html#lighting">Smart Lighting</a></li>
+          <li><a href="products.html#climate">Climate Control</a></li>
+          <li><a href="products.html#security">Security Systems</a></li>
+          <li><a href="products.html#av">AV Integration</a></li>
+          <li><a href="products.html#energy">Energy Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-newsletter">
+        <h3 class="footer-col-title">Stay Informed</h3>
+        <p>Get monthly insights on smart living, automation trends, and exclusive offers.</p>
+        <div class="newsletter-form" id="newsletter-form" role="form" aria-label="Newsletter signup">
+          <input type="email" class="newsletter-input" placeholder="Your email" aria-label="Email address for newsletter" required />
+          <button type="button" class="newsletter-btn" aria-label="Subscribe to newsletter">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/seran_home/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/seran-homeautomation/about/" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/917411182846" class="social-btn social-btn--whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Seran Home Automation. All rights reserved. Designed with ♥ in Bengaluru.</p>
+      <nav class="footer-bottom-links" aria-label="Legal links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="sitemap.html">Sitemap</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="float-group">
+  <a href="https://wa.me/917411182846?text=Hi%20Seran!%20I%27m%20interested%20in%20home%20automation%20for%20my%20property." class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+</div>
+
+<div id="toast-container" aria-live="polite" aria-atomic="true" aria-label="Notifications"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
