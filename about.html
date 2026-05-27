@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Seran Home Automation | Bengaluru</title>
+  <meta name="description" content="Learn about Seran Home Automation — Bengaluru's most trusted smart home and building automation studio since 2013. Meet our team and our story." />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- STICKY CTA BAR -->
+<div id="sticky-cta" role="banner" aria-label="Special offer">
+  <div class="container">
+    <div class="sticky-cta-inner">
+      <p>🏠 Free Smart Home Consultation — Limited slots available this month!</p>
+      <a href="contact.html#lead-form" class="sticky-cta-btn">Book Free Demo</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+  <a href="index.html" class="nav-logo" aria-label="Seran Home Automation — Home">
+        <img src="assets/images/logo.png" alt="Seran Home Automation" height="44" width="auto" />
+      </a>
+      <ul class="nav-links" role="list">
+        <li class="nav-item">
+          <button class="nav-link" aria-haspopup="true" aria-expanded="false" aria-controls="mega-menu-solutions">
+            Solutions <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="mega-menu glass" id="mega-menu-solutions" role="region" aria-label="Solutions menu">
+            <div class="mega-menu-grid">
+              <a href="solutions.html#residential" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-house-signal" aria-hidden="true"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Residential Homes</h3><p>Smart lighting, climate, and security for premium homes and villas.</p></div>
+              </a>
+              <a href="solutions.html#offices" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-building" aria-hidden="true"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Corporate Offices</h3><p>Intelligent building control to boost productivity and efficiency.</p></div>
+              </a>
+              <a href="solutions.html#hotels" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-hotel" aria-hidden="true"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Hotels &amp; Hospitality</h3><p>Elevate guest experience with seamless room automation.</p></div>
+              </a>
+              <a href="solutions.html#healthcare" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-hospital" aria-hidden="true"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Healthcare Facilities</h3><p>Safe, efficient automation for hospitals and clinics.</p></div>
+              </a>
+            </div>
+            <div class="mega-menu-footer">
+              <span>Explore all solutions →</span>
+              <a href="contact.html#lead-form" class="btn-primary btn-sm-nav">Get Consultation</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" aria-haspopup="true" aria-expanded="false" aria-controls="mega-menu-products">
+            Products <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="mega-menu glass" id="mega-menu-products" role="region" aria-label="Products menu">
+            <div class="mega-menu-grid">
+              <a href="products.html#lighting" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Smart Lighting</h3><p>DALI, DMX, and KNX-compatible intelligent lighting systems.</p></div>
+              </a>
+              <a href="products.html#climate" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-temperature-half" aria-hidden="true"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Climate Control</h3><p>Precision HVAC and smart thermostat integration.</p></div>
+              </a>
+              <a href="products.html#security" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Security Systems</h3><p>AI-powered surveillance, access control, and intrusion detection.</p></div>
+              </a>
+              <a href="products.html#av" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-tv" aria-hidden="true"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">AV &amp; Entertainment</h3><p>Home theatre, multi-room audio, and 4K distribution systems.</p></div>
+              </a>
+            </div>
+            <div class="mega-menu-footer">
+              <span>View full product catalog →</span>
+              <a href="products.html" class="btn-outline btn-sm-nav">Browse All</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="insights.html" class="nav-link">Insights</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" data-action="toggle-theme" aria-label="Toggle light/dark mode" title="Toggle theme">
+          <i class="fa-solid fa-sun" data-theme-icon aria-hidden="true"></i>
+        </button>
+        <a href="contact.html#lead-form" class="btn-primary nav-cta">
+          Free Demo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav glass" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+  </button>
+  <button class="mobile-nav-link" data-submenu="mobile-solutions" aria-expanded="false" aria-controls="mobile-solutions">
+    Solutions <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+  </button>
+  <div class="mobile-submenu" id="mobile-solutions" aria-hidden="true">
+    <a href="solutions.html#residential">Residential Homes</a>
+    <a href="solutions.html#offices">Corporate Offices</a>
+    <a href="solutions.html#hotels">Hotels &amp; Hospitality</a>
+    <a href="solutions.html#healthcare">Healthcare</a>
+  </div>
+  <button class="mobile-nav-link" data-submenu="mobile-products" aria-expanded="false" aria-controls="mobile-products">
+    Products <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+  </button>
+  <div class="mobile-submenu" id="mobile-products" aria-hidden="true">
+    <a href="products.html#lighting">Smart Lighting</a>
+    <a href="products.html#climate">Climate Control</a>
+    <a href="products.html#security">Security Systems</a>
+    <a href="products.html#av">AV &amp; Entertainment</a>
+  </div>
+  <a href="about.html" class="mobile-nav-link">About</a>
+  <a href="insights.html" class="mobile-nav-link">Insights</a>
+  <a href="contact.html" class="mobile-nav-link">Contact</a>
+  <div class="mobile-nav-footer">
+    <a href="contact.html#lead-form" class="btn-primary btn-block">Book Free Demo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    <button class="btn-outline btn-block btn-theme-toggle" data-action="toggle-theme">
+      <i class="fa-solid fa-sun" data-theme-icon aria-hidden="true"></i> Toggle Theme
+    </button>
+    <div class="mobile-nav-contact">
+      <a href="tel:+919986480485"><i class="fa-solid fa-phone"></i> +91 99864 80485</a>
+      <a href="https://wa.me/919986480485" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+    </div>
+    <div class="mobile-nav-social">
+      <a href="https://www.instagram.com/seran_home/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/company/seran-homeautomation/about/" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://wa.me/919986480485" class="social-btn social-btn--whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════
+  PAGE HERO
+═══════════════════════════════════════ -->
+<section id="page-hero" style="padding:10rem 0 5rem; background:linear-gradient(135deg,rgba(10,8,20,0.55) 0%,rgba(20,18,35,0.45) 100%), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&auto=format&fit=crop&q=80') center/cover no-repeat;" aria-label="About page hero">
+  <div class="container">
+    <div style="max-width:700px;">
+      <div class="hero-badge" style="display:inline-flex;"><i class="fa-solid fa-circle-dot" aria-hidden="true"></i> Our Story</div>
+      <h1 class="hero-title" style="margin-top:1.2rem;">
+        Bengaluru's Most Trusted<br><strong>Automation Studio</strong>
+      </h1>
+      <p class="hero-subtitle">Founded in Jayanagar in 2013, Seran has spent over a decade transforming ordinary spaces into extraordinary intelligent environments. We don't just install systems — we craft experiences.</p>
+      <div class="hero-actions" style="margin-top:2rem;">
+        <a href="contact.html#lead-form" class="btn-primary">Work With Us <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a href="#our-story" class="btn-outline"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Read Our Story</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+  STATS
+═══════════════════════════════════════ -->
+<section id="stats" aria-labelledby="stats-heading">
+  <h2 id="stats-heading" class="sr-only">Our achievements</h2>
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal delay-1">
+        <div class="stat-number"><span data-counter data-target="100" data-suffix="+">100+</span></div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div class="stat-item reveal delay-2">
+        <div class="stat-number"><span data-counter data-target="3" data-suffix="">3</span></div>
+        <div class="stat-label">Years of Excellence</div>
+      </div>
+      <div class="stat-item reveal delay-3">
+        <div class="stat-number"><span data-counter data-target="98" data-suffix="%">98%</span></div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+      <div class="stat-item reveal delay-4">
+        <div class="stat-number"><span data-counter data-target="24" data-suffix="/7">24/7</span></div>
+        <div class="stat-label">Support Available</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  OUR STORY
+═══════════════════════════════════════ -->
+<section id="our-story" class="section-pad" aria-labelledby="story-heading">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal-left">
+        <div class="about-image-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Seran smart home studio in Jayanagar Bengaluru" width="800" height="500" loading="lazy" class="about-img" />
+          <div class="about-badge">Est. 2013</div>
+        </div>
+      </div>
+      <div class="about-content reveal-right">
+        <div class="section-label">Who We Are</div>
+        <h2 class="section-title" id="story-heading">Where Technology <span>Meets Luxury</span></h2>
+        <p class="section-sub">Seran was born from a simple belief: that the technology controlling your home should feel invisible, intuitive, and elegant. Our founders — a team of electrical engineers and interior design enthusiasts — saw a gap in Bengaluru's market for truly premium, bespoke automation experiences.</p>
+        <p style="color:var(--text-muted,#9E9B93); line-height:1.8; margin-bottom:1.5rem;">Starting with just three residential projects in Jayanagar, we grew steadily through word of mouth alone. Today we serve clients across Bengaluru — from Koramangala penthouses to Whitefield tech campuses to five-star hotels in Indiranagar.</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-icon"><i class="fa-solid fa-medal" aria-hidden="true"></i></div>
+            <div class="about-feature-text">
+              <h3 class="about-feature-title">Award-Winning Design</h3>
+              <p>Recognised by the India Smart Home Awards 2023 for outstanding residential automation design.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div>
+            <div class="about-feature-text">
+              <h3 class="about-feature-title">White-Glove Installation</h3>
+              <p>Our certified engineers handle every detail — from cable routing to scene programming — with zero disruption to your home.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon"><i class="fa-solid fa-headset" aria-hidden="true"></i></div>
+            <div class="about-feature-text">
+              <h3 class="about-feature-title">Lifetime Support Promise</h3>
+              <p>24/7 remote monitoring and on-site support within 4 hours for all Bengaluru projects.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+  OUR VALUES
+═══════════════════════════════════════ -->
+<section id="values" class="section-pad" style="background:var(--surface-alt,#0f0e18);" aria-labelledby="values-heading">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">What Drives Us</div>
+      <h2 class="section-title section-title--center" id="values-heading">Our <span>Core Values</span></h2>
+      <p class="section-sub section-sub--center">Every decision we make — from product selection to installation technique — is guided by these principles.</p>
+    </div>
+    <div class="hiw-grid">
+      <div class="hiw-step reveal delay-1">
+        <div class="hiw-icon"><i class="fa-solid fa-gem"></i></div>
+        <h3 class="hiw-title">Uncompromising Quality</h3>
+        <p class="hiw-desc">We specify only products we'd install in our own homes. Every component is tested, certified, and backed by manufacturer warranty.</p>
+      </div>
+      <div class="hiw-connector reveal delay-1" aria-hidden="true"></div>
+      <div class="hiw-step reveal delay-2">
+        <div class="hiw-icon"><i class="fa-solid fa-lightbulb"></i></div>
+        <h3 class="hiw-title">Design-First Thinking</h3>
+        <p class="hiw-desc">Automation should enhance your space, not clutter it. We hide every wire, panel, and sensor behind elegant finishes and intuitive interfaces.</p>
+      </div>
+      <div class="hiw-connector reveal delay-2" aria-hidden="true"></div>
+      <div class="hiw-step reveal delay-3">
+        <div class="hiw-icon"><i class="fa-solid fa-handshake"></i></div>
+        <h3 class="hiw-title">Client-First Always</h3>
+        <p class="hiw-desc">Our job isn't done at handover. We train every household member, answer every question, and stay available long after the last panel is fitted.</p>
+      </div>
+      <div class="hiw-connector reveal delay-3" aria-hidden="true"></div>
+      <div class="hiw-step reveal delay-4">
+        <div class="hiw-icon"><i class="fa-solid fa-leaf"></i></div>
+        <h3 class="hiw-title">Sustainable Innovation</h3>
+        <p class="hiw-desc">Every system we install is designed to reduce energy waste. Smart automation is not just luxury — it's responsible living for the future.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+  TEAM
+═══════════════════════════════════════ -->
+<section id="team" class="section-pad" aria-labelledby="team-heading">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">The People Behind Seran</div>
+      <h2 class="section-title section-title--center" id="team-heading">Meet Our <span>Leadership</span></h2>
+      <p class="section-sub section-sub--center">A team of engineers, designers, and automation enthusiasts united by one goal — making your space extraordinary.</p>
+    </div>
+    <div class="solutions-grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+      <div class="solution-card reveal delay-1" style="cursor:default;">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&auto=format&fit=crop&q=80');background-size:cover;background-position:top;"></div>
+        <div class="solution-card-overlay"></div>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-user-tie" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Arjun Seran</h3>
+          <p class="solution-card-desc">Founder &amp; CEO. Electrical engineer turned automation visionary. 18 years in smart building systems across India and the Middle East.</p>
+        </div>
+      </div>
+      <div class="solution-card reveal delay-2" style="cursor:default;">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&q=80');background-size:cover;background-position:top;"></div>
+        <div class="solution-card-overlay"></div>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-user-tie" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Meera Krishnan</h3>
+          <p class="solution-card-desc">Head of Design. Interior architect with a passion for technology-forward spaces. Ensures every installation is as beautiful as it is functional.</p>
+        </div>
+      </div>
+      <div class="solution-card reveal delay-3" style="cursor:default;">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&auto=format&fit=crop&q=80');background-size:cover;background-position:top;"></div>
+        <div class="solution-card-overlay"></div>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-user-tie" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Vikram Nair</h3>
+          <p class="solution-card-desc">Chief Engineer. KNX-certified systems integrator with 200+ residential and commercial projects across Bengaluru and Chennai.</p>
+        </div>
+      </div>
+      <div class="solution-card reveal delay-4" style="cursor:default;">
+        <div class="solution-card-bg" style="background-image:url('https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&auto=format&fit=crop&q=80');background-size:cover;background-position:top;"></div>
+        <div class="solution-card-overlay"></div>
+        <div class="solution-card-body">
+          <div class="solution-card-icon"><i class="fa-solid fa-user-tie" aria-hidden="true"></i></div>
+          <h3 class="solution-card-title">Priya Sundaram</h3>
+          <p class="solution-card-desc">Client Relations Director. Dedicated to ensuring every Seran client receives white-glove service from first call to final handover and beyond.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+  CERTIFICATIONS
+═══════════════════════════════════════ -->
+<section id="certifications" class="section-pad" style="background:var(--surface-alt,#0f0e18);" aria-labelledby="cert-heading">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <div class="section-label section-label--center">Credentials</div>
+      <h2 class="section-title section-title--center" id="cert-heading">Certified &amp; <span>Trusted</span></h2>
+      <p class="section-sub section-sub--center">Our engineers hold internationally recognised certifications and are authorised partners for the world's leading automation brands.</p>
+    </div>
+    <div style="margin-top:3rem;">
+      <div class="brands-strip reveal">
+        <p class="brands-label">Certified Partners &amp; Integrations</p>
+        <div class="brands-logos" role="list" aria-label="Brand partners">
+          <span class="brand-logo" role="listitem">KNX</span>
+          <span class="brand-logo" role="listitem">Control4</span>
+          <span class="brand-logo" role="listitem">Crestron</span>
+          <span class="brand-logo" role="listitem">Lutron</span>
+          <span class="brand-logo" role="listitem">Savant</span>
+          <span class="brand-logo" role="listitem">Loxone</span>
+          <span class="brand-logo" role="listitem">AMX</span>
+        </div>
+      </div>
+    </div>
+    <div class="hiw-grid" style="margin-top:3rem;">
+      <div class="hiw-step reveal delay-1">
+        <div class="hiw-icon"><i class="fa-solid fa-certificate"></i></div>
+        <h3 class="hiw-title">KNX Certified</h3>
+        <p class="hiw-desc">International KNX Association certified engineers for open-standard building automation across all project types.</p>
+      </div>
+      <div class="hiw-connector reveal delay-1" aria-hidden="true"></div>
+      <div class="hiw-step reveal delay-2">
+        <div class="hiw-icon"><i class="fa-solid fa-star"></i></div>
+        <h3 class="hiw-title">Control4 Dealer</h3>
+        <p class="hiw-desc">Authorised Control4 dealer and programming specialist for residential and light commercial projects.</p>
+      </div>
+      <div class="hiw-connector reveal delay-2" aria-hidden="true"></div>
+      <div class="hiw-step reveal delay-3">
+        <div class="hiw-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3 class="hiw-title">ISO 9001:2015</h3>
+        <p class="hiw-desc">Quality management certified — every installation follows a documented, audited process from site survey to commissioning.</p>
+      </div>
+      <div class="hiw-connector reveal delay-3" aria-hidden="true"></div>
+      <div class="hiw-step reveal delay-4">
+        <div class="hiw-icon"><i class="fa-solid fa-award"></i></div>
+        <h3 class="hiw-title">Award Winner 2023</h3>
+        <p class="hiw-desc">India Smart Home Awards 2023 — Best Residential Automation Studio, South India.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+  TESTIMONIALS
+═══════════════════════════════════════ -->
+<section id="testimonials" class="section-pad" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="section-header section-header--center section-header--mb reveal">
+      <div class="section-label section-label--center">Client Stories</div>
+      <h2 class="section-title section-title--center" id="testimonials-heading">What Our <span>Clients Say</span></h2>
+    </div>
+    <div class="reviews-badge reveal">
+      <a href="https://g.co/kgs/seran" target="_blank" rel="noopener noreferrer" class="reviews-badge-inner" aria-label="View Seran reviews on Google">
+        <div class="reviews-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <div class="reviews-text"><strong>4.9 / 5</strong> · Based on Google Reviews <i class="fa-brands fa-google" style="color:#4285F4"></i></div>
+      </a>
+    </div>
+    <div class="swiper testimonials-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote">Seran transformed our Sadashivanagar villa into something out of a film. The lighting scenes alone are worth every rupee. Exceptional team, exceptional result.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">RK</div>
+              <div class="author-info"><h3 class="author-name">Rajesh Kumar</h3><span>Villa Owner, Sadashivanagar</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote">Our Koramangala office saw a 30% reduction in energy bills after Seran's smart building installation. The ROI speaks for itself. Highly professional team.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">PM</div>
+              <div class="author-info"><h3 class="author-name">Priya Menon</h3><span>Founder, TechVentures India</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote">We had 3 other vendors quote before Seran. Nobody else understood our needs the way they did. Installation was flawless. Support has been outstanding for 2 years.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">NK</div>
+              <div class="author-info"><h3 class="author-name">Nandita Krishnan</h3><span>Homeowner, Whitefield</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination swiper-pagination--below"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA BAND -->
+<section class="section-pad" style="background:linear-gradient(135deg,#1a1040 0%,#2d1b69 100%);text-align:center;" aria-label="Call to action">
+  <div class="container">
+    <div class="reveal" style="max-width:640px;margin:0 auto;">
+      <div class="section-label section-label--center">Let's Build Together</div>
+      <h2 class="section-title section-title--center">Start Your Smart Home <span>Journey Today</span></h2>
+      <p class="section-sub section-sub--center" style="margin-bottom:2.5rem;">Book a free consultation and experience the Seran difference — expert advice, beautiful design, and a system you'll love for years.</p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a href="contact.html#lead-form" class="btn-primary">Book Free Demo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a href="tel:+919986480485" class="btn-outline"><i class="fa-solid fa-phone" aria-hidden="true"></i> Call Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer id="footer" role="contentinfo" aria-label="Site footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+       <a href="index.html" class="nav-logo" aria-label="Seran Home Automation — Home">
+        <img src="assets/images/logo.png" alt="Seran Home Automation" height="44" width="auto" />
+      </a>
+        <p>Crafting intelligent living and working environments across Bengaluru since 2013. Where technology meets luxury.</p>
+        <address class="footer-address">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>44, 6th C Main Road, 4th Block,<br>Jayanagar, Bengaluru,<br>Karnataka – 560011, India</span>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col-title">Solutions</h3>
+        <ul class="footer-links">
+          <li><a href="solutions.html#residential">Smart Homes</a></li>
+          <li><a href="solutions.html#offices">Corporate Offices</a></li>
+          <li><a href="solutions.html#hotels">Hotels &amp; Resorts</a></li>
+          <li><a href="solutions.html#healthcare">Healthcare</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col-title">Products</h3>
+        <ul class="footer-links">
+          <li><a href="products.html#lighting">Smart Lighting</a></li>
+          <li><a href="products.html#climate">Climate Control</a></li>
+          <li><a href="products.html#security">Security Systems</a></li>
+          <li><a href="products.html#av">AV Integration</a></li>
+          <li><a href="products.html#energy">Energy Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-newsletter">
+        <h3 class="footer-col-title">Stay Informed</h3>
+        <p>Get monthly insights on smart living, automation trends, and exclusive offers.</p>
+        <div class="newsletter-form" id="newsletter-form" role="form" aria-label="Newsletter signup">
+          <input type="email" class="newsletter-input" placeholder="Your email" aria-label="Email address for newsletter" required />
+          <button type="button" class="newsletter-btn" aria-label="Subscribe to newsletter">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/seran_home/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/seran-homeautomation/about/" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/919986480485" class="social-btn social-btn--whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Seran Home Automation. All rights reserved. Designed with ♥ in Bengaluru.</p>
+      <nav class="footer-bottom-links" aria-label="Legal links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="sitemap.html">Sitemap</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="float-group">
+  <a href="https://wa.me/919986480485?text=Hi%20Seran!%20I%27m%20interested%20in%20home%20automation%20for%20my%20property." class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+</div>
+
+<div id="toast-container" aria-live="polite" aria-atomic="true" aria-label="Notifications"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

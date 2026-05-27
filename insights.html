@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights — Seran Home Automation | Bengaluru</title>
+  <meta name="description" content="Smart home tips, automation trends, and expert insights from Seran Home Automation — Bengaluru's leading automation studio." />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap-grid.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── Insights-specific styles ── */
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .insight-card {
+      background: var(--surface, #13111f);
+      border: 1px solid rgba(212,175,113,0.12);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .insight-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    }
+    .insight-card-img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+    }
+    .insight-card-body {
+      padding: 1.6rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .insight-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.9rem;
+      flex-wrap: wrap;
+    }
+    .insight-tag {
+      font-size: 0.72rem;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold, #D4AF71);
+      background: rgba(212,175,113,0.1);
+      border: 1px solid rgba(212,175,113,0.25);
+      padding: 0.25rem 0.7rem;
+      border-radius: 20px;
+    }
+    .insight-date {
+      font-size: 0.78rem;
+      color: var(--text-muted, #9E9B93);
+    }
+    .insight-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--text-primary, #F5F3EE);
+      line-height: 1.4;
+      margin-bottom: 0.75rem;
+    }
+    .insight-excerpt {
+      font-size: 0.88rem;
+      color: var(--text-muted, #9E9B93);
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 1.2rem;
+    }
+    .insight-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.82rem;
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      color: var(--gold, #D4AF71);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: gap 0.2s;
+    }
+    .insight-read-more:hover { gap: 0.7rem; }
+
+    .insight-card--featured {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .insight-card--featured .insight-card-img {
+      height: 100%;
+      min-height: 280px;
+    }
+    @media (max-width: 640px) {
+      .insight-card--featured {
+        grid-template-columns: 1fr;
+      }
+      .insight-card--featured .insight-card-img {
+        height: 220px;
+      }
+    }
+
+    .insights-filter {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .filter-btn {
+      padding: 0.5rem 1.2rem;
+      border-radius: 30px;
+      border: 1px solid rgba(212,175,113,0.25);
+      background: transparent;
+      color: var(--text-muted, #9E9B93);
+      font-family: 'Syne', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--gold, #D4AF71);
+      border-color: var(--gold, #D4AF71);
+      color: #0a0818;
+    }
+
+    .newsletter-band {
+      background: linear-gradient(135deg, rgba(212,175,113,0.08) 0%, rgba(48,43,99,0.4) 100%);
+      border: 1px solid rgba(212,175,113,0.15);
+      border-radius: 20px;
+      padding: 3rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    .newsletter-band h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--text-primary, #F5F3EE);
+      margin-bottom: 0.5rem;
+    }
+    .newsletter-band p {
+      color: var(--text-muted, #9E9B93);
+      margin-bottom: 1.8rem;
+    }
+    .newsletter-band-form {
+      display: flex;
+      gap: 0.75rem;
+      max-width: 480px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .newsletter-band-form input {
+      flex: 1;
+      min-width: 220px;
+      padding: 0.85rem 1.2rem;
+      border-radius: 10px;
+      border: 1px solid rgba(212,175,113,0.25);
+      background: rgba(255,255,255,0.05);
+      color: var(--text-primary, #F5F3EE);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+    }
+    .newsletter-band-form input::placeholder { color: var(--text-muted, #9E9B93); }
+    .newsletter-band-form input:focus { outline: none; border-color: var(--gold, #D4AF71); }
+  </style>
+</head>
+<body>
+
+<!-- STICKY CTA BAR -->
+<div id="sticky-cta" role="banner" aria-label="Special offer">
+  <div class="container">
+    <div class="sticky-cta-inner">
+      <p>🏠 Free Smart Home Consultation — Limited slots available this month!</p>
+      <a href="contact.html#lead-form" class="sticky-cta-btn">Book Free Demo</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+     <a href="index.html" class="nav-logo" aria-label="Seran Home Automation — Home">
+        <img src="assets/images/logo.png" alt="Seran Home Automation" height="44" width="auto" />
+      </a>
+      <ul class="nav-links" role="list">
+        <li class="nav-item">
+          <button class="nav-link" aria-haspopup="true" aria-expanded="false" aria-controls="mega-menu-solutions">
+            Solutions <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="mega-menu glass" id="mega-menu-solutions" role="region" aria-label="Solutions menu">
+            <div class="mega-menu-grid">
+              <a href="solutions.html#residential" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-house-signal"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Residential Homes</h3><p>Smart lighting, climate, and security for premium homes.</p></div>
+              </a>
+              <a href="solutions.html#offices" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-building"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Corporate Offices</h3><p>Intelligent building control for productivity and efficiency.</p></div>
+              </a>
+              <a href="solutions.html#hotels" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-hotel"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Hotels &amp; Hospitality</h3><p>Elevate guest experience with room automation.</p></div>
+              </a>
+              <a href="solutions.html#healthcare" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-hospital"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Healthcare Facilities</h3><p>Safe, efficient automation for hospitals and clinics.</p></div>
+              </a>
+            </div>
+            <div class="mega-menu-footer">
+              <span>Explore all solutions →</span>
+              <a href="contact.html#lead-form" class="btn-primary btn-sm-nav">Get Consultation</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" aria-haspopup="true" aria-expanded="false" aria-controls="mega-menu-products">
+            Products <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="mega-menu glass" id="mega-menu-products" role="region" aria-label="Products menu">
+            <div class="mega-menu-grid">
+              <a href="products.html#lighting" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Smart Lighting</h3><p>DALI, DMX, and KNX-compatible lighting systems.</p></div>
+              </a>
+              <a href="products.html#climate" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-temperature-half"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Climate Control</h3><p>Precision HVAC and smart thermostat integration.</p></div>
+              </a>
+              <a href="products.html#security" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">Security Systems</h3><p>AI-powered surveillance and access control.</p></div>
+              </a>
+              <a href="products.html#av" class="mega-item">
+                <div class="mega-icon"><i class="fa-solid fa-tv"></i></div>
+                <div class="mega-info"><h3 class="mega-item-title">AV &amp; Entertainment</h3><p>Home theatre and multi-room audio systems.</p></div>
+              </a>
+            </div>
+            <div class="mega-menu-footer">
+              <span>View full product catalog →</span>
+              <a href="products.html" class="btn-outline btn-sm-nav">Browse All</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="insights.html" class="nav-link">Insights</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" data-action="toggle-theme" aria-label="Toggle light/dark mode">
+          <i class="fa-solid fa-sun" data-theme-icon aria-hidden="true"></i>
+        </button>
+        <a href="contact.html#lead-form" class="btn-primary nav-cta">
+          Free Demo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+<nav class="mobile-nav glass" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  <button class="mobile-nav-link" data-submenu="mobile-solutions" aria-expanded="false" aria-controls="mobile-solutions">Solutions <i class="fa-solid fa-chevron-down"></i></button>
+  <div class="mobile-submenu" id="mobile-solutions" aria-hidden="true">
+    <a href="solutions.html#residential">Residential Homes</a>
+    <a href="solutions.html#offices">Corporate Offices</a>
+    <a href="solutions.html#hotels">Hotels &amp; Hospitality</a>
+    <a href="solutions.html#healthcare">Healthcare</a>
+  </div>
+  <button class="mobile-nav-link" data-submenu="mobile-products" aria-expanded="false" aria-controls="mobile-products">Products <i class="fa-solid fa-chevron-down"></i></button>
+  <div class="mobile-submenu" id="mobile-products" aria-hidden="true">
+    <a href="products.html#lighting">Smart Lighting</a>
+    <a href="products.html#climate">Climate Control</a>
+    <a href="products.html#security">Security Systems</a>
+    <a href="products.html#av">AV &amp; Entertainment</a>
+  </div>
+  <a href="about.html" class="mobile-nav-link">About</a>
+  <a href="insights.html" class="mobile-nav-link">Insights</a>
+  <a href="contact.html" class="mobile-nav-link">Contact</a>
+  <div class="mobile-nav-footer">
+    <a href="contact.html#lead-form" class="btn-primary btn-block">Book Free Demo <i class="fa-solid fa-arrow-right"></i></a>
+    <div class="mobile-nav-contact">
+      <a href="tel:+919986480485"><i class="fa-solid fa-phone"></i> +91 99864 80485</a>
+      <a href="https://wa.me/919986480485" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+    </div>
+    <div class="mobile-nav-social">
+      <a href="https://www.instagram.com/seran_home/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/company/seran-homeautomation/about/" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://wa.me/919986480485" class="social-btn social-btn--whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- PAGE HERO -->
+<section id="page-hero" style="padding:10rem 0 5rem; background:linear-gradient(135deg,rgba(10,8,20,0.55) 0%,rgba(20,18,35,0.45) 100%), url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1600&auto=format&fit=crop&q=80') center/cover no-repeat;" aria-label="Insights page hero">
+  <div class="container">
+    <div style="max-width:700px;">
+      <div class="hero-badge" style="display:inline-flex;"><i class="fa-solid fa-circle-dot"></i> Expert Insights</div>
+      <h1 class="hero-title" style="margin-top:1.2rem;">
+        Smart Living,<br><strong>Smarter Decisions</strong>
+      </h1>
+      <p class="hero-subtitle">Tips, trends, and in-depth guides from Bengaluru's leading home automation experts — everything you need to make informed decisions about your smart home.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ARTICLES -->
+<section id="articles" class="section-pad" aria-labelledby="articles-heading">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div class="section-label">Latest Articles</div>
+      <h2 class="section-title" id="articles-heading">From Our <span>Experts</span></h2>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="insights-filter reveal" role="group" aria-label="Filter articles by category">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="smart-home">Smart Home</button>
+      <button class="filter-btn" data-filter="lighting">Lighting</button>
+      <button class="filter-btn" data-filter="security">Security</button>
+      <button class="filter-btn" data-filter="energy">Energy</button>
+      <button class="filter-btn" data-filter="av">AV &amp; Audio</button>
+    </div>
+
+    <div class="insights-grid">
+
+      <!-- Featured Article -->
+      <article class="insight-card insight-card--featured reveal" data-category="smart-home">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80" alt="Modern smart home interior with ambient lighting" class="insight-card-img" loading="lazy" width="900" height="500" />
+        <div class="insight-card-body">
+          <div class="insight-meta">
+            <span class="insight-tag">Smart Home</span>
+            <span class="insight-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> April 2025</span>
+            <span class="insight-date"><i class="fa-regular fa-clock" aria-hidden="true"></i> 8 min read</span>
+          </div>
+          <h3 class="insight-title" style="font-size:clamp(1.5rem,2.5vw,2rem);">The Complete Guide to Smart Home Automation in Bengaluru: What to Expect in 2025</h3>
+          <p class="insight-excerpt">From KNX-based wired systems to wireless Zigbee retrofits — we break down every approach available in Bengaluru's market today, with real project costs, timelines, and what questions to ask any automation company before you sign a contract.</p>
+          <a href="contact.html#lead-form" class="insight-read-more">Read Full Guide <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="insight-card reveal delay-1" data-category="lighting">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=700&auto=format&fit=crop&q=80" alt="DALI smart lighting system in a luxury apartment" class="insight-card-img" loading="lazy" width="700" height="400" />
+        <div class="insight-card-body">
+          <div class="insight-meta">
+            <span class="insight-tag">Lighting</span>
+            <span class="insight-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> March 2025</span>
+          </div>
+          <h3 class="insight-title">DALI vs KNX vs Zigbee: Which Smart Lighting Protocol Is Right for Your Home?</h3>
+          <p class="insight-excerpt">A practical comparison of the three most popular lighting control protocols — covering cost, reliability, scalability, and which one Seran recommends for different project sizes.</p>
+          <a href="contact.html#lead-form" class="insight-read-more">Read Article <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="insight-card reveal delay-2" data-category="energy">
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=700&auto=format&fit=crop&q=80" alt="Solar panels and smart energy management system" class="insight-card-img" loading="lazy" width="700" height="400" />
+        <div class="insight-card-body">
+          <div class="insight-meta">
+            <span class="insight-tag">Energy</span>
+            <span class="insight-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> March 2025</span>
+          </div>
+          <h3 class="insight-title">How Smart Home Automation Cut Our Client's Electricity Bill by 38%</h3>
+          <p class="insight-excerpt">A detailed case study from a 4,200 sq.ft villa in Whitefield — showing exactly which automations delivered the biggest energy savings, and the simple ROI calculation any homeowner can do.</p>
+          <a href="contact.html#lead-form" class="insight-read-more">Read Case Study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+      <!-- Article 4 -->
+      <article class="insight-card reveal delay-1" data-category="security">
+        <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=700&auto=format&fit=crop&q=80" alt="AI smart security camera system for home" class="insight-card-img" loading="lazy" width="700" height="400" />
+        <div class="insight-card-body">
+          <div class="insight-meta">
+            <span class="insight-tag">Security</span>
+            <span class="insight-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> February 2025</span>
+          </div>
+          <h3 class="insight-title">AI vs Traditional CCTV: Why Bengaluru Homeowners Are Switching to Smart Surveillance</h3>
+          <p class="insight-excerpt">Traditional CCTV records everything and tells you nothing. We explain how AI-powered cameras filter out false alarms, recognise familiar faces, and alert you only when it truly matters.</p>
+          <a href="contact.html#lead-form" class="insight-read-more">Read Article <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+      <!-- Article 5 -->
+      <article class="insight-card reveal delay-2" data-category="smart-home">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=700&auto=format&fit=crop&q=80" alt="Retrofitting smart automation into an existing home" class="insight-card-img" loading="lazy" width="700" height="400" />
+        <div class="insight-card-body">
+          <div class="insight-meta">
+            <span class="insight-tag">Smart Home</span>
+            <span class="insight-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> February 2025</span>
+          </div>
+          <h3 class="insight-title">Retrofit Smart Home: How to Automate an Existing Flat Without Breaking a Single Wall</h3>
+          <p class="insight-excerpt">Think automation is only for new builds? Our wireless retrofit approach can transform any existing apartment in Bengaluru — in as little as 3 days, with no civil work required.</p>
+          <a href="contact.html#lead-form" class="insight-read-more">Read Article <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+      <!-- Article 6 -->
+      <article class="insight-card reveal delay-3" data-category="av">
+        <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=700&auto=format&fit=crop&q=80" alt="Luxury home theatre with Dolby Atmos surround sound" class="insight-card-img" loading="lazy" width="700" height="400" />
+        <div class="insight-card-body">
+          <div class="insight-meta">
+            <span class="insight-tag">AV &amp; Audio</span>
+            <span class="insight-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> January 2025</span>
+          </div>
+          <h3 class="insight-title">Building a Home Theatre in Bengaluru: The Complete 2025 Planning Guide</h3>
+          <p class="insight-excerpt">Room acoustics, projector vs LED wall, Dolby Atmos vs DTS:X, seating layout — everything you need to plan a home cinema that delivers a true big-screen experience at home.</p>
+          <a href="contact.html#lead-form" class="insight-read-more">Read Guide <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+      <!-- Article 7 -->
+      <article class="insight-card reveal delay-1" data-category="smart-home">
+        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=700&auto=format&fit=crop&q=80" alt="Smart home voice control with Alexa and Google Home" class="insight-card-img" loading="lazy" width="700" height="400" />
+        <div class="insight-card-body">
+          <div class="insight-meta">
+            <span class="insight-tag">Smart Home</span>
+            <span class="insight-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> January 2025</span>
+          </div>
+          <h3 class="insight-title">Alexa vs Google Home vs Apple HomeKit: Which Voice Platform Works Best in India?</h3>
+          <p class="insight-excerpt">We tested all three major voice platforms across six months in real Bengaluru homes — accounting for Indian accent recognition, local language support, and integration with Indian smart devices.</p>
+          <a href="contact.html#lead-form" class="insight-read-more">Read Review <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+      <!-- Article 8 -->
+      <article class="insight-card reveal delay-2" data-category="lighting">
+        <img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=700&auto=format&fit=crop&q=80" alt="Human-centric circadian lighting for wellness" class="insight-card-img" loading="lazy" width="700" height="400" />
+        <div class="insight-card-body">
+          <div class="insight-meta">
+            <span class="insight-tag">Lighting</span>
+            <span class="insight-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> December 2024</span>
+          </div>
+          <h3 class="insight-title">What Is Human-Centric Lighting and Why Does It Matter for Your Health?</h3>
+          <p class="insight-excerpt">Lighting that mimics natural sunlight cycles can improve sleep, boost focus, and reduce eye strain. We explain the science behind circadian lighting and how to implement it in any Indian home.</p>
+          <a href="contact.html#lead-form" class="insight-read-more">Read Article <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+      <!-- Article 9 -->
+      <article class="insight-card reveal delay-3" data-category="energy">
+        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=700&auto=format&fit=crop&q=80" alt="Smart energy monitoring dashboard" class="insight-card-img" loading="lazy" width="700" height="400" />
+        <div class="insight-card-body">
+          <div class="insight-meta">
+            <span class="insight-tag">Energy</span>
+            <span class="insight-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> December 2024</span>
+          </div>
+          <h3 class="insight-title">5 Smart Automation Upgrades That Pay for Themselves Within 2 Years</h3>
+          <p class="insight-excerpt">Not all automation is equal when it comes to ROI. These five specific upgrades — with real cost and saving data from Bengaluru projects — consistently deliver measurable returns on investment.</p>
+          <a href="contact.html#lead-form" class="insight-read-more">Read Article <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Newsletter Band -->
+    <div class="newsletter-band reveal">
+      <h2>Never Miss an Insight</h2>
+      <p>Get our monthly smart home guide delivered to your inbox — no spam, just useful knowledge.</p>
+      <div class="newsletter-band-form">
+        <input type="email" placeholder="Your email address" aria-label="Email for newsletter" />
+        <a href="contact.html#lead-form" class="btn-primary">Subscribe <i class="fa-solid fa-paper-plane" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CTA BAND -->
+<section class="section-pad" style="background:linear-gradient(135deg,#1a1040 0%,#2d1b69 100%);text-align:center;" aria-label="Call to action">
+  <div class="container">
+    <div class="reveal" style="max-width:640px;margin:0 auto;">
+      <div class="section-label section-label--center">Ready to Transform Your Space?</div>
+      <h2 class="section-title section-title--center">From Reading to <span>Reality</span></h2>
+      <p class="section-sub section-sub--center" style="margin-bottom:2.5rem;">Book a free consultation and let our experts design a smart home tailored specifically for you.</p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a href="contact.html#lead-form" class="btn-primary">Book Free Demo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a href="tel:+919986480485" class="btn-outline"><i class="fa-solid fa-phone" aria-hidden="true"></i> Call Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer id="footer" role="contentinfo" aria-label="Site footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+       <a href="index.html" class="nav-logo" aria-label="Seran Home Automation — Home">
+        <img src="assets/images/logo.png" alt="Seran Home Automation" height="44" width="auto" />
+      </a>
+        <p>Crafting intelligent living and working environments across Bengaluru since 2013. Where technology meets luxury.</p>
+        <address class="footer-address">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>44, 6th C Main Road, 4th Block,<br>Jayanagar, Bengaluru,<br>Karnataka – 560011, India</span>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col-title">Solutions</h3>
+        <ul class="footer-links">
+          <li><a href="solutions.html#residential">Smart Homes</a></li>
+          <li><a href="solutions.html#offices">Corporate Offices</a></li>
+          <li><a href="solutions.html#hotels">Hotels &amp; Resorts</a></li>
+          <li><a href="solutions.html#healthcare">Healthcare</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-col-title">Products</h3>
+        <ul class="footer-links">
+          <li><a href="products.html#lighting">Smart Lighting</a></li>
+          <li><a href="products.html#climate">Climate Control</a></li>
+          <li><a href="products.html#security">Security Systems</a></li>
+          <li><a href="products.html#av">AV Integration</a></li>
+          <li><a href="products.html#energy">Energy Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-newsletter">
+        <h3 class="footer-col-title">Stay Informed</h3>
+        <p>Get monthly insights on smart living, automation trends, and exclusive offers.</p>
+        <div class="newsletter-form" id="newsletter-form" role="form" aria-label="Newsletter signup">
+          <input type="email" class="newsletter-input" placeholder="Your email" aria-label="Email address for newsletter" required />
+          <button type="button" class="newsletter-btn" aria-label="Subscribe to newsletter">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/seran_home/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/seran-homeautomation/about/" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/919986480485" class="social-btn social-btn--whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Seran Home Automation. All rights reserved. Designed with ♥ in Bengaluru.</p>
+      <nav class="footer-bottom-links" aria-label="Legal links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="sitemap.html">Sitemap</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<div class="float-group">
+  <a href="https://wa.me/919986480485?text=Hi%20Seran!%20I%27m%20interested%20in%20home%20automation%20for%20my%20property." class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+</div>
+
+<div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+<script src="main.js"></script>
+<script>
+  // Filter buttons
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const articles = document.querySelectorAll('.insight-card[data-category]');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      articles.forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>
